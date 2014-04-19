@@ -1,0 +1,19 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+/home/user2/spring14/dl2573/Desktop/Embedded\ Systems/MDP3.0/src {/home/user2/spring14/dl2573/Desktop/Embedded Systems/MDP3.0/src/SoCKit_golden_top.v}
+vlog -sv -work work +incdir+/home/user2/spring14/dl2573/Desktop/Embedded\ Systems/MDP3.0/src {/home/user2/spring14/dl2573/Desktop/Embedded Systems/MDP3.0/src/MDP3_Parser.sv}
+vlog -sv -work work +incdir+/home/user2/spring14/dl2573/Desktop/Embedded\ Systems/MDP3.0/src {/home/user2/spring14/dl2573/Desktop/Embedded Systems/MDP3.0/src/MDP3_Parser_tb.sv}
+
+vlog -sv -work work +incdir+/home/user2/spring14/dl2573/Desktop/Embedded\ Systems/MDP3.0/src {/home/user2/spring14/dl2573/Desktop/Embedded Systems/MDP3.0/src/MDP3_Parser_tb.sv}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  MDP3_Parser_tb
+
+add wave *
+view structure
+view signals
+run 180 ns

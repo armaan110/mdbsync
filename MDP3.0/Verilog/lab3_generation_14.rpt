@@ -1,0 +1,20 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory="/home/user2/spring14/dl2573/Desktop/Embedded Systems/MDP3.0/Verilog/" --output-directory="/home/user2/spring14/dl2573/Desktop/Embedded Systems/MDP3.0/Verilog/lab3/" --report-file="bsf:/home/user2/spring14/dl2573/Desktop/Embedded Systems/MDP3.0/Verilog/lab3.bsf" --system-info=DEVICE_FAMILY="Cyclone V" --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --component-file="/home/user2/spring14/dl2573/Desktop/Embedded Systems/MDP3.0/Verilog/lab3.qsys"
+Progress: Loading Verilog/lab3.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding hps_0 [altera_hps 13.1.1]
+Progress: Parameterizing module hps_0
+Progress: Adding master_0 [altera_jtag_avalon_master 13.1]
+Progress: Parameterizing module master_0
+Progress: Adding vga_led_0 [vga_led 1.0]
+Progress: Parameterizing module vga_led_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: lab3.hps_0.h2f_lw_axi_master/vga_led_0.avalon_slave_0: vga_led_0.avalon_slave_0 does not have byteenables. Writes from narrow master hps_0.h2f_lw_axi_master may result in data corruption.
+Warning: lab3.master_0.master/vga_led_0.avalon_slave_0: vga_led_0.avalon_slave_0 does not have byteenables. Writes from narrow master master_0.master may result in data corruption.
+Info: ip-generate succeeded.
+Info: Stopping: Create block symbol file (.bsf)

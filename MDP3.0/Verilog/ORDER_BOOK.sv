@@ -1,0 +1,27 @@
+/* Order book module */
+
+module ORDER_BOOK (input logic clk,
+		   input logic [3:0] NUM_MD_ENTRIES1, NUM_MD_ENTRIES2, MD_UPDATE_ACTION1, MD_UPDATE_ACTION2, MD_ENTRY_TYPE1, MD_ENTRY_TYPE2,
+					NUM_ORDERS1, NUM_ORDERS2;
+);
+
+logic [7:0] MD_UPDATE_ACTION, NUM_MD_ENTRIES, NUM_ORDERS, MD_ENTRY_TYPE;
+
+always_ff @(posedge clk) begin
+	MD_UPDATE_ACTION <= {MD_UPDATE_ACTION1, MD_UPDATE_ACTION2};
+	MD_ENTRY_TYPE <= {MD_ENTRY_TYPE1, MD_ENTRY_TYPE2};
+	NUM_MD_ENTRIES <= {NUM_MD_ENTRIES1, NUM_MD_ENTRIES2};
+	NUM_ORDERS <= {NUM_ORDERS1, NUM_ORDERS2};
+
+
+	if (MD_ENTRY_TYPE == 8'b00000000) begin //bid book
+		
+
+	end else if(MD_ENTRY_TYPE == 8'b00000001) begin
+
+
+	end
+end
+
+
+endmodule	

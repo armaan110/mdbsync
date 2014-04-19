@@ -1,0 +1,60 @@
+# do SoCKit_golden_top_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /opt/altera/quartus-13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/quartus-13.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+/home/user2/spring14/dl2573/Desktop/Embedded\ Systems/MDP3.0/src {/home/user2/spring14/dl2573/Desktop/Embedded Systems/MDP3.0/src/SoCKit_golden_top.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module SoCKit_golden_top
+# 
+# Top level modules:
+# 	SoCKit_golden_top
+# vlog -sv -work work +incdir+/home/user2/spring14/dl2573/Desktop/Embedded\ Systems/MDP3.0/src {/home/user2/spring14/dl2573/Desktop/Embedded Systems/MDP3.0/src/MDP3_Parser.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MDP3_Parser
+# 
+# Top level modules:
+# 	MDP3_Parser
+# vlog -sv -work work +incdir+/home/user2/spring14/dl2573/Desktop/Embedded\ Systems/MDP3.0/src {/home/user2/spring14/dl2573/Desktop/Embedded Systems/MDP3.0/src/MDP3_Parser_tb.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MDP3_Parser_tb
+# 
+# Top level modules:
+# 	MDP3_Parser_tb
+# 
+# vlog -sv -work work +incdir+/home/user2/spring14/dl2573/Desktop/Embedded\ Systems/MDP3.0/src {/home/user2/spring14/dl2573/Desktop/Embedded Systems/MDP3.0/src/MDP3_Parser_tb.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MDP3_Parser_tb
+# 
+# Top level modules:
+# 	MDP3_Parser_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  MDP3_Parser_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps MDP3_Parser_tb 
+# Loading sv_std.std
+# Loading work.MDP3_Parser_tb
+# Loading work.MDP3_Parser
+# 
+# add wave *
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: dl2573  Hostname: micro16  ProcessID: 23087
+#           Attempting to use alternate WLF file "./wlftWRbG0X".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftWRbG0X
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 180 ns
+# FATAL ERROR: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.
